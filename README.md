@@ -57,7 +57,7 @@ ACCESS_TOKEN_EXPIRY=1d
 REFRESH_TOKEN_SECRET=your_secret
 REFRESH_TOKEN_EXPIRY=10d
 
-# Mail Settings
+Mail Settings
 SMTP_HOST=smtp.mailtrap.io
 SMTP_PORT=2525
 SMTP_USER=your_user
@@ -65,10 +65,10 @@ SMTP_PASS=your_pass
 
 4. Run the Server
 
-# Development mode with nodemon
+Development mode with nodemon
 npm run dev
 
-# Production mode
+Production mode
 npm start
 
 🛤 API Roadmap
