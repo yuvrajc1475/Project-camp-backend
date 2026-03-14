@@ -1,5 +1,5 @@
 import { body } from "express-validator";
-
+import {AvailableUserRole}from "../utils/constants.js"
 
 const userRegistrationValidator = () => {
     return [
@@ -58,8 +58,19 @@ const userResetForgotPasswordValidator = () => {
     ]
 }
 
+const createProjectValidator = () => {
+    return [
+        body("name").notEmpty().withMessage("Nmae is required"),
+        body("description").optional()
+    ]
+}
 
-
+const addMemberToProjectValidator = () => {
+    return [
+        body("email").trim().notEmpty().withMessage("Email is required").isEmail().withMessage("Email is required"),
+        body("role").notEmpty().withMessage("Role is required").isIn(AvailableUserRole).withMessage("Role is invalid")
+    ]
+}
 
 
 
@@ -69,4 +80,6 @@ export {
   userChangeCurrentPasswordValidator,
   userForgotPasswordValidator,
   userResetForgotPasswordValidator,
+  createProjectValidator,
+  addMemberToProjectValidator,
 };
