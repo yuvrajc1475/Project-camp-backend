@@ -40,4 +40,10 @@ app.get("/", (req, res) => {
     res.send("Welcome to basecampy");
 })
 
+// 1. Import the task router
+import taskRouter from "./routes/task.routes.js";
+
+
+// 2. Register the route
+app.use("/api/v1/tasks", taskRouter);
 export default app;
