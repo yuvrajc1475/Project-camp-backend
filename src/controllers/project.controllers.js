@@ -275,7 +275,6 @@ export {
     getProjects,
     getProjectById,
     getProjectMembers,
-    updateProject,
     deleteProject,
     updateProject,
     updateMemberRole
