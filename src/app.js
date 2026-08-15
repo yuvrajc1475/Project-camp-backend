@@ -3,6 +3,7 @@ import cors from "cors";
 import cookieParser from "cookie-parser";
 
 const app = express();
+app.use(express.static("public"));
 
 
 //basic config
@@ -36,9 +37,7 @@ app.use("/api/v1/auth", authRouter);
 app.use("/api/v1/projects", projectRouter);
 
 
-app.get("/", (req, res) => {
-    res.send("Welcome to basecampy");
-})
+
 
 // 1. Import the task router
 import taskRouter from "./routes/task.routes.js";
